@@ -9,7 +9,7 @@ on:
 jobs:
   validate-deployment-on-develop-org:
     run-on: ubuntu-latest
-    if ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - uses: actions/setup-node@v2
         with:
