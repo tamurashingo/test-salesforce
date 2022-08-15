@@ -13,8 +13,8 @@ private class SampleFooTest {
         SampleFoo foo = new SampleFoo();
         foo.foo();
 
-        Aaaaa a = [SELECT Id FROM Aaaaa];
+        List<Aaaaa> alist = [SELECT Id FROM Aaaaa];
 
-        System.assert(a != null);
+        System.assertEquals(1, alist.size());
     }
 }
