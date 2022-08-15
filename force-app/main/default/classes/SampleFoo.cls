@@ -8,7 +8,7 @@ public with sharing class SampleFoo {
     }
 
     public void foo() {
-        Aaaaa a = new Aaaaa();
+        Aaaaa__c a = new Aaaaa__c();
         insert a;
     }
 }

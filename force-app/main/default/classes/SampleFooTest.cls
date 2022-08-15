@@ -13,7 +13,7 @@ private class SampleFooTest {
         SampleFoo foo = new SampleFoo();
         foo.foo();
 
-        List<Aaaaa> alist = [SELECT Id FROM Aaaaa];
+        List<Aaaaa__c> alist = [SELECT Id FROM Aaaaa__c];
 
         System.assertEquals(1, alist.size());
     }
