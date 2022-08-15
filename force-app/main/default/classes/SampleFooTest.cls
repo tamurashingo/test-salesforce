@@ -7,4 +7,14 @@ private class SampleFooTest {
 
         System.assertEquals(2, foo.addThree(0, 0));
     }
+
+    @isTest
+    static void test2() {
+        SampleFoo foo = new SampleFoo();
+        foo.foo();
+
+        Aaaaa a = [SELECT Id FROM Aaaaa];
+
+        System.assert(a != null);
+    }
 }
