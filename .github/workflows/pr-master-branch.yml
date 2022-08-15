@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ master ]
     paths:
-      - 'sfdx-src/**'
+      - 'force-app/**'
 
 jobs:
   validate-deployment-on-develop-org:
