@@ -29,8 +29,12 @@ jobs:
         shell: bash
         run: |
           echo ${{ secrets.SFDX_DEVELOPMENT_URL}} > ./SFDX_DEVELOPMENT_URL.txt
-      - name: 'Authenticate to Integration Org'
+      - name: 'Authenticate to Developer Org'
         run: sfdx auth:sfdxurl:store -f ./SFDX_DEVELOPMENT_URL.txt -s -a devorg
+      - name: 'create new scratch org'
+        run: sfdx force:org:create -f config/project-scratch-def.json -s -a github-scratch -d 2
       - name: 'run all tests'
         run: |
           sfdx force:source:deploy -p "force-app" --checkonly --testlevel RunLocalTests  --json
+      - name: 'delete scratch org'
+        run: sfdx force:org:delete -u github-scratch -p
