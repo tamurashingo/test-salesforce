@@ -30,7 +30,7 @@ jobs:
         run: |
           echo ${{ secrets.SFDX_DEVELOPMENT_URL}} > ./SFDX_DEVELOPMENT_URL.txt
       - name: 'Authenticate to Developer Org'
-        run: sfdx auth:sfdxurl:store -f ./SFDX_DEVELOPMENT_URL.txt -s -a devorg
+        run: sfdx auth:sfdxurl:store -f ./SFDX_DEVELOPMENT_URL.txt -d -s -a devorg
       - name: 'show org list'
         run: sfdx force:org:list
       - name: 'create new scratch org'
