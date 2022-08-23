@@ -39,4 +39,5 @@ jobs:
         run: |
           sfdx force:source:deploy -p "force-app" --checkonly --testlevel RunLocalTests  --json
       - name: 'delete scratch org'
+        if: ${{ always() }}
         run: sfdx force:org:delete -u github-scratch -p
