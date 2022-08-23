@@ -7,7 +7,7 @@ private class SampleFooTest {
         System.assertEquals(9, foo.addThree(2, 4));
         System.assertEquals(10, foo.addThree(3, 4));
 
-        //System.assertEquals(2, foo.addThree(0, 0));
+        System.assertEquals(2, foo.addThree(0, 0));
     }
 
     @isTest
