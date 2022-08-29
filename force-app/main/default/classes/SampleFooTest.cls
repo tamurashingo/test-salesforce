@@ -5,8 +5,9 @@ private class SampleFooTest {
         SampleFoo foo = new SampleFoo();
         System.assertEquals(8, foo.addThree(2, 3));
         System.assertEquals(9, foo.addThree(2, 4));
+        System.assertEquals(10, foo.addThree(3, 4));
 
-        //System.assertEquals(2, foo.addThree(0, 0));
+        System.assertEquals(2, foo.addThree(0, 0));
     }
 
     @isTest
