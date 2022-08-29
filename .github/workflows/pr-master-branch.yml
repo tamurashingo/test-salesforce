@@ -31,8 +31,6 @@ jobs:
           echo ${{ secrets.SFDX_DEVELOPMENT_URL}} > ./SFDX_DEVELOPMENT_URL.txt
       - name: 'Authenticate to Developer Org'
         run: sfdx auth:sfdxurl:store -f ./SFDX_DEVELOPMENT_URL.txt -d -s -a devorg
-      - name: 'show org list'
-        run: sfdx force:org:list
       - name: 'create new scratch org'
         run: sfdx force:org:create -f config/project-scratch-def.json -s -a github-scratch -d 2 -u devorg
       - name: 'run all tests'
